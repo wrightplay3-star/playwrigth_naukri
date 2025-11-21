@@ -4,9 +4,12 @@ on:
     #branches: [ main, master ]
   #pull_request:
     #branches: [ main, master ]
-   
+    workflow_dispatch:   # allows manual run
+    schedule:
+    # Every day at 11:45 PM IST
+    - cron: '15 18 * * *'
     
-  schedule:
+ 
     # Monday to Friday at 8:30 AM IST
     - cron: '0 3 * * 1-5'
     # Monday to Friday at 9:30 AM IST
@@ -15,6 +18,8 @@ on:
     - cron: '0 10 * * 1-5'
     # Every day at 11:35 PM IST
     - cron: '5 18 * * *'
+
+    
 jobs:   
   test:  
     timeout-minutes: 60

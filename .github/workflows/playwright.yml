@@ -5,13 +5,17 @@ on:
   #pull_request:
     #branches: [ main, master ]
    
-    schedule:
-    - cron: '30 8 * * *'  #8:30 AM daily  
-      #- cron: '10 09 06 11 4'  #6:10 PM (18:10) on Thursday, November 6th
-      #minute hour day month weekday = 0 0 * * *
-      #if needed, add more schedules here also for report you can use 
-      ####### !cancelled() insted of always()
-jobs:
+    
+  schedule:
+    # Monday to Friday at 8:30 AM IST
+    - cron: '0 3 * * 1-5'
+    # Monday to Friday at 9:30 AM IST
+    - cron: '0 4 * * 1-5'
+    # Monday to Friday at 3:30 PM IST
+    - cron: '0 10 * * 1-5'
+    # Every day at 11:35 PM IST
+    - cron: '5 18 * * *'
+jobs:   
   test:  
     timeout-minutes: 60
     runs-on: ubuntu-latest

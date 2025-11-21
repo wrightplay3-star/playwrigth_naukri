@@ -19,8 +19,8 @@ await page.locator("//button[text()='Login']").click()
 //await page.waitForLoadState('networkidle')
 
 // ensure profile area is visible and click it
-await page.waitForSelector('div.view-profile-wrapper', { state: 'visible' })
-await page.locator('div.view-profile-wrapper').click()
+await page.waitForSelector('.view-profile-wrapper', { state: 'visible' })
+await page.locator('.view-profile-wrapper').click()
 
 // wait for the file input to be attached and upload using a resolved path
 const resumePath = path.resolve('tests/uploadfiles/MANJUNATH R.docx')
@@ -28,6 +28,8 @@ await page.waitForSelector('input[type="file"]', { state: 'attached' })
 await page.setInputFiles('input[type="file"]', resumePath)
 //await page.locator('//input[@Class="dummyUpload typ-14Bold"]').setInputFiles('tests/uploadfiles/MANJUNATH R.docx')
 
-
+await  page.locator('img.nI-gNb-icon-img').click()
+await page.locator("//a[@title='Logout']").click()
+await page.close()
 
 })

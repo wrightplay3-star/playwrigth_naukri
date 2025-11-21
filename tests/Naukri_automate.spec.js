@@ -19,7 +19,7 @@ await page.locator("//button[text()='Login']").click()
 //await page.waitForLoadState('networkidle')
 
 // ensure profile area is visible and click it
-await page.waitForSelector('.view-profile-wrapper', { state: 'visible',timeout: 600000  })
+await page.waitForSelector('//div[@class="view-profile-wrapper"]//a[1]', { state: 'visible',timeout: 600000  })
 await page.locator('.view-profile-wrapper').click()
 
 // wait for the file input to be attached and upload using a resolved path

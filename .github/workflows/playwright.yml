@@ -17,7 +17,7 @@ on:
     # Monday to Friday at 3:30 PM IST
     - cron: '0 10 * * 1-5'
     # Every day at 11:35 PM IST
-    - cron: '5 18 * * *'
+    #- cron: '5 18 * * *'
 
     
 jobs:   

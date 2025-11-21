@@ -7,7 +7,7 @@ on:
     workflow_dispatch:   # allows manual run
     schedule:
     # Every day at 11:45 PM IST
-    - cron: '15 18 * * *'
+    #- cron: '15 18 * * *'
     
  
     # Monday to Friday at 8:30 AM IST

@@ -6,7 +6,7 @@ test ('verify naukri',async ({page})=>{
 
 await page.goto('https://www.naukri.com/')
 
-await page.locator('//a[@id="login_Layer"]').click()
+await page.locator("//a[normalize-space(text())='Login']").click()
 
 //await page.setInputFiles('input[type="file"]', 'e2e/MANJUNATH R.docx')
 

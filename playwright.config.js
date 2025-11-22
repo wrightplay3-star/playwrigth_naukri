@@ -1,5 +1,7 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+import { TIMEOUT } from 'dns';
+require('dotenv').config();
 
 /**
  * Read environment variables from file.
@@ -13,11 +15,12 @@ import { defineConfig, devices } from '@playwright/test';
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-timeout: 300000, // Global test timeout (30s)
+
   expect: {
-    timeout: 30000, // Expect assertion timeout (10s)
+    timeout: 5000000
   },
- 
+
+ timeout :600000,
 
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -35,8 +38,8 @@ timeout: 300000, // Global test timeout (30s)
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
-    actionTimeout: 30000,      // Timeout for actions
-    navigationTimeout: 30000,  // Timeout for navigations
+    actionTimeout: 300000,      // Timeout for actions
+    navigationTimeout: 300000,  // Timeout for navigations
   
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

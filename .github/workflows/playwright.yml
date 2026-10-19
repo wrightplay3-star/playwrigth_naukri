@@ -5,17 +5,17 @@ on:
   #pull_request:
     #branches: [ main, master ]
     workflow_dispatch:   # allows manual run
-    schedule:
+    #schedule:
     # Every day at 11:45 PM IST
     #- cron: '15 18 * * *'
     
  
     # Monday to Friday at 8:30 AM IST
-    - cron: '0 3 * * 1-6'
+    #- cron: '0 3 * * 1-6'
     # Monday to Friday at 9:30 AM IST
-    - cron: '0 4 * * 1-6'
+    #- cron: '0 4 * * 1-6'
     # Monday to Friday at 3:30 PM IST
-    - cron: '0 10 * * 1-6'
+    #- cron: '0 10 * * 1-6'
     # Every day at 11:35 PM IST
     #- cron: '5 18 * * *'
 
